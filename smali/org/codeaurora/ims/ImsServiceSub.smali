@@ -8855,13 +8855,6 @@
 
     if-ne v0, v2, :cond_6
 
-    .line 517
-    invoke-static {}, Landroid/telephony/TelephonyBaseUtilsStub;->isMiuiRom()Z
-
-    move-result v2
-
-    if-nez v2, :cond_5
-
     .line 518
     iget-object v2, p0, Lorg/codeaurora/ims/ImsServiceSub;->mSubController:Lorg/codeaurora/ims/ImsSubController;
 
@@ -8924,7 +8917,6 @@
 
     .line 528
     .end local v6    # "mode":I
-    :cond_5
     invoke-direct {p0}, Lorg/codeaurora/ims/ImsServiceSub;->maybeUpdateMediaConfiguration()V
 
     goto :goto_3
